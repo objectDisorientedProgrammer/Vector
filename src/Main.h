@@ -25,7 +25,8 @@
 #define MAIN_H_
 
 //#include "Vector.h"
-//#include "Vector2.h"
+#include "Vector2.h"
+#include "Vector2.cpp"
 //#include "Vector3.h"
 
 #include <iostream>

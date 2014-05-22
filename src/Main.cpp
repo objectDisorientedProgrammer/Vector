@@ -26,5 +26,16 @@
 int main()
 {
   cout << "Vectors!!!!!!!!" << endl;
+  Vector2<int> v1, v2(3,4), v3(-9,2);
+  cout << "v1=" << v1 << endl;
+  cout << "v2=" << v2 << endl;
+  cout << "v3=" << v3 << endl;
+  v1.add(v2);
+  v1 + v3;
+  v2 = v1 * 5;
+
+  cout << "v1=" << v1 << endl;
+  cout << "v2=" << v2 << endl;
+  cout << "v3=" << v3 << endl;
   return 0;
 }
