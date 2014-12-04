@@ -3,12 +3,29 @@
  *
  *  Created on: May 21, 2014
  *      Author: doug
+ *
+ *  See Vector.h for explanations of operators and functions.
+ *
+    2D Vector class.
+    Copyright (C) 2014  Douglas Chidester
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
 #ifndef VECTOR2_H_
 #define VECTOR2_H_
 
-//#include "Vector.h"
 #include <iostream>
 #include <math.h>
 
@@ -20,24 +37,24 @@ public:
   Vector2(T, T);
   //virtual ~Vector2();
 
-  //T getLength();
+  double magnitude();
 
   void add(const Vector2<T>&);
-  //virtual Vector<T> add(const Vector<T>&, const Vector<T>&);
   Vector2<T>& operator +(const Vector2<T>&);
 
   void subtract(const Vector2<T>&);
-  //virtual Vector<T> subtract(const Vector<T>&, const Vector<T>&);
   Vector2<T>& operator -(const Vector2<T>&);
 
   void multiply(const Vector2<T>&);
   void multiply(const T);
-  //virtual Vector<T> multiply(Vector<T>&, Vector<T>&);
   Vector2<T>& operator *(const Vector2<T>&);
   Vector2<T>& operator *(const T);
 
-  Vector2<T>& crossProduct(const Vector2<T>&, const Vector2<T>&);
-  T dotProduct(const Vector2<T>&, const Vector2<T>&);
+  Vector2<T>& operator /(const Vector2<T>&);
+  Vector2<T>& operator /(const T);
+
+  T crossProduct(const Vector2<T>&);
+  T dotProduct(const Vector2<T>&);
 
   template<typename T2>
   friend std::ostream& operator << (std::ostream&, const Vector2<T2>&);

@@ -3,6 +3,24 @@
  *
  *  Created on: May 21, 2014
  *      Author: doug
+ *
+ *  See Vector.h for explanations of operators and functions.
+ *
+    2D Vector class.
+    Copyright (C) 2014  Douglas Chidester
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
 #include "Vector2.h"
@@ -23,13 +41,13 @@ Vector2<T>::Vector2(T xValue, T yValue)
 
 //template<typename T>
 //Vector2<T>::~Vector2() {}
-/*
+
 template<typename T>
-T getLength()
+double Vector2<T>::magnitude()
 {
-	return sqrt(double(x * x + y * y));
+	return pow(this->x*this->x + this->y*this->y, 0.5);
 }
-*/
+
 template<typename T>
 void Vector2<T>::add(const Vector2<T>& otherVector)
 {
@@ -91,15 +109,31 @@ Vector2<T>& Vector2<T>::operator *(const T scalar)
 }
 
 template<typename T>
-Vector2<T>& Vector2<T>::crossProduct(const Vector2<T>&, const Vector2<T>&)
+Vector2<T>& Vector2<T>::operator /(const Vector2<T>& v2)
 {
-
+	this->x /= v2.x;
+	this->y /= v2.y;
+	return *this;
 }
 
 template<typename T>
-T Vector2<T>::dotProduct(const Vector2<T>&, const Vector2<T>&)
+Vector2<T>& Vector2<T>::operator /(const T number)
 {
+	this->x /= number;
+	this->y /= number;
+	return *this;
+}
 
+template<typename T>
+T Vector2<T>::crossProduct(const Vector2<T>& v2)
+{
+	return this->x*v2.y - this->y*v2.x;
+}
+
+template<typename T>
+T Vector2<T>::dotProduct(const Vector2<T>& v2)
+{
+	return this->x*v2.x + this->y*v2.y;
 }
 
 template<typename T2>

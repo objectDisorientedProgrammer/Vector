@@ -1,10 +1,12 @@
 /*
- * Vector.cpp
+ * Vector3.h
  *
- *  Created on: May 21, 2014
+ *  Created on: Dec 3, 2014
  *      Author: doug
  *
-    Vector base class (to be inherited from).
+ *  See Vector.h for explanations of operators and functions.
+ *
+    3D Vector class.
     Copyright (C) 2014  Douglas Chidester
 
     This program is free software: you can redistribute it and/or modify
@@ -21,17 +23,16 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+#ifndef VECTOR3_H_
+#define VECTOR3_H_
+
 #include "Vector.h"
 
-//template<typename T>
-//Vector<T>::Vector() {}
-
-template<typename T>
-Vector<T>::~Vector() {}
-
-template<typename T2>
-std::ostream& operator << (std::ostream& outs, const Vector<T2>& vec)
+class Vector3: public Vector2
 {
-  outs << vec;
-  return outs;
-}
+public:
+	Vector3();
+	virtual ~Vector3();
+};
+
+#endif /* VECTOR3_H_ */

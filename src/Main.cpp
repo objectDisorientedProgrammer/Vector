@@ -23,6 +23,8 @@
 
 #include "Main.h"
 
+void checkMagnitude(Vector2<int>, int expectedSquared);
+
 int main()
 {
   cout << "Vectors!!!!!!!!" << endl;
@@ -30,12 +32,47 @@ int main()
   cout << "v1=" << v1 << endl;
   cout << "v2=" << v2 << endl;
   cout << "v3=" << v3 << endl;
+
+  cout << "v1 cross v2" << endl;
+  cout << v1.crossProduct(v2) << endl;
+  cout << "v1=" << v1 << endl;
+  cout << "v2=" << v2 << endl;
+
+  cout << "+++ Adding v1.add(v2) +++" << endl;
   v1.add(v2);
+  cout << "v1=" << v1 << endl;
+
+  cout << "+++ Adding v1 + v3 +++" << endl;
   v1 + v3;
-  v2 = v1 * 5;
+  cout << "v1=" << v1 << endl;
+
+  cout << "*** Multiply v2 = v1 * 5 ***" << endl;
+  v2 = v1 * 5; // ERROR multiplies v1 by 5 and keeps it that way
+  v1 = v1 / 5; // correct error from line above
 
   cout << "v1=" << v1 << endl;
   cout << "v2=" << v2 << endl;
+
+  cout << "--- Subtract v2 - v3 ---" << endl;
+  v2-v3;
+  cout << "v2=" << v2 << endl;
   cout << "v3=" << v3 << endl;
+
+  cout << "checking vector magnitudes..." << endl;
+  cout << "|v1| = ";
+  checkMagnitude(v1, 72);
+  cout << "|v2| = ";
+  checkMagnitude(v2, 1225);
+  cout << "|v3| = ";
+  checkMagnitude(v3, 85);
+
+
+
   return 0;
+}
+
+void checkMagnitude(Vector2<int> vec, int expectedSquared)
+{
+	assert(vec.magnitude() == pow(expectedSquared, 0.5));
+	cout << vec.magnitude() << " true." << endl;
 }
