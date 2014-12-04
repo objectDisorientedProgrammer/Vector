@@ -23,7 +23,13 @@ Vector2<T>::Vector2(T xValue, T yValue)
 
 //template<typename T>
 //Vector2<T>::~Vector2() {}
-
+/*
+template<typename T>
+T getLength()
+{
+	return sqrt(double(x * x + y * y));
+}
+*/
 template<typename T>
 void Vector2<T>::add(const Vector2<T>& otherVector)
 {

@@ -10,6 +10,7 @@
 
 //#include "Vector.h"
 #include <iostream>
+#include <math.h>
 
 template<typename T>
 class Vector2// : public Vector<T>
@@ -18,6 +19,8 @@ public:
   Vector2();
   Vector2(T, T);
   //virtual ~Vector2();
+
+  //T getLength();
 
   void add(const Vector2<T>&);
   //virtual Vector<T> add(const Vector<T>&, const Vector<T>&);

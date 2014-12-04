@@ -9,6 +9,7 @@
 #define VECTOR_H_
 
 #include <iostream>
+#include <math.h>
 
 template<typename T>
 class Vector
@@ -16,6 +17,8 @@ class Vector
 public:
   //Vector();
   virtual ~Vector();
+
+  //virtual T getLength() = 0;
 
   virtual void add(const Vector<T>&) = 0;
   //virtual Vector<T> add(const Vector<T>&, const Vector<T>&) = 0;
