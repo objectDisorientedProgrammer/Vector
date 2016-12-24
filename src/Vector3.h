@@ -23,8 +23,8 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef VECTOR3_H_
-#define VECTOR3_H_
+#ifndef VECTOR3_H
+#define VECTOR3_H
 
 #include "Vector.h"
 
@@ -35,4 +35,4 @@ public:
 	virtual ~Vector3();
 };
 
-#endif /* VECTOR3_H_ */
+#endif /* VECTOR3_H */

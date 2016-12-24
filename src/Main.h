@@ -21,17 +21,17 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef MAIN_H_
-#define MAIN_H_
+#ifndef MAIN_H
+#define MAIN_H
 
 //#include "Vector.h"
 #include "Vector2.h"
-#include "Vector2.cpp"
 //#include "Vector3.h"
 
 #include <iostream>
 #include <assert.h>
-using namespace std;
+using std::cout;
+using std::endl;
 
 
-#endif /* MAIN_H_ */
+#endif /* MAIN_H */

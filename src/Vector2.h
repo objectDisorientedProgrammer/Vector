@@ -23,14 +23,15 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef VECTOR2_H_
-#define VECTOR2_H_
+#ifndef VECTOR2_H
+#define VECTOR2_H
 
+#include "Vector.h"
 #include <iostream>
 #include <math.h>
 
 template<typename T>
-class Vector2// : public Vector<T>
+class Vector2 : public Vector<T>
 {
 public:
   Vector2();
@@ -64,4 +65,4 @@ protected:
   T y;
 };
 
-#endif /* VECTOR2_H_ */
+#endif /* VECTOR2_H */
