@@ -21,8 +21,8 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef VECTOR_H_
-#define VECTOR_H_
+#ifndef VECTOR_H
+#define VECTOR_H
 
 #include <iostream>
 #include <math.h>
@@ -61,4 +61,4 @@ public:
   friend std::ostream& operator << (std::ostream&, const Vector<T2>&);
 };
 
-#endif /* VECTOR_H_ */
+#endif /* VECTOR_H */
